@@ -1,0 +1,15 @@
+<script>
+const letters = new Set();
+// Add Values to the Set
+letters.add("a");
+letters.add("b");
+letters.add("b");
+console.log(letters);
+
+
+let text = "";
+letters.forEach (function(value) {
+  text += value;
+})
+console.log(text);
+</script>

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <style>
+        .garden {
+            width: 600px;
+            height: 500px;
+            background-color: blue;
+            display: grid;
+            grid-template-columns: 15% 15% 15% 15% 15%;
+            grid-template-rows: 20% 20% 20% 20% 20%;
+            gap:10px;
+        }
+        .box{
+          background-color: red;
+        }
+        .one{
+            order:3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="garden">
+        <div class="box one">1</div>
+        <div class="box one">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+    </div>
+
+</body>
+
+</html>
+
+However box1 has an order of 3 and box2 an order of 2. These boxes have a higher order value so are positioned after all of the boxes with an order value of 1.
