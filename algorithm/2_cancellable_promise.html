@@ -1,0 +1,29 @@
+https://medium.com/@masnun/creating-cancellable-promises-33bf4b9da39c
+<script>
+    function wait(signal, ms) {
+  return new Promise((res, rej) => {
+    const timeOut = setTimeout(() => {
+      console.log("I was called");
+      res("ok");
+    }, ms);
+
+    signal.catch(err => {
+      rej(err);
+      clearTimeout(timeOut);
+    });
+  });
+}
+
+function createTimedSignal(ms) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject(new Error(`Time out after ${ms}ms`));
+    }, ms);
+  });
+}
+
+const signal = createTimedSignal(1500);
+
+const promise = wait(signal, 1000);
+promise.then(res => console.log(res)).catch(err => console.log(err));
+</script>

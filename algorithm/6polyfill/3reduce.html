@@ -1,0 +1,16 @@
+<script>
+    Array.prototype.myReduce = function (cb, initialValue) {
+  // Complete the implementation of myReduce
+  let accumulator = initialValue;
+    
+  for (let i = 0; i < this.length; i++) {
+      if (accumulator) {
+          accumulator = cb(accumulator, this[i], i, this);
+      } else {
+          accumulator = this[i]
+      }
+  }
+
+  return accumulator;
+};
+</script>

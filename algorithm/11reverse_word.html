@@ -1,0 +1,16 @@
+<script>
+     function global(n) {
+        let resultData=n.split(' ');
+        let len=resultData.length;
+        for(let i=0;i<len;i++)
+        {
+            resultData[i]=arrayreverse(resultData[i]);
+        }
+        function arrayreverse(arr) {
+            return arr.split('').reverse().join('');
+        }
+        
+        console.log(resultData);
+    }
+    global("I am programmer");
+</script>

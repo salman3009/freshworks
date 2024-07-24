@@ -1,0 +1,27 @@
+<script>
+    function anagram(n1,n2)
+{
+  if(n1.length!=n2.length){
+    return false;
+  }
+  let obj1={};
+  let obj2={};
+
+  n1.split('').forEach(function(s){
+    obj1[s]?obj1[s]++:obj1[s]=1;
+  });
+
+  n2.split('').forEach(function(s){
+    obj2[s]?obj2[s]++:obj2[s]=1;
+  });
+   
+  for(let data in obj1){
+      if(!obj2[data] || obj2[data] != obj1[data]){
+           return false;
+      }
+  }
+       return true;
+}
+
+console.log(anagram("abc","cca"));
+</script>

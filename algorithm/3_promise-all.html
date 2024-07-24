@@ -1,0 +1,22 @@
+<script>
+    function one(){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("one");
+            },3000)
+        })
+    }
+
+    function two(){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("two");
+            },1000)
+        })
+    }
+
+    Promise.all([one(),two()]).then((obj)=>{
+           console.log(obj);
+    })
+   
+</script>

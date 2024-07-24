@@ -1,0 +1,30 @@
+<!-- <script>
+    function integerReversal(str)
+{
+    let reverseinteger=str.toString().split("").reverse().join("");
+    if(str===parseInt(reverseinteger))
+    {
+        return true;
+    }
+    return false;
+}
+console.log(integerReversal(121));
+</script> -->
+
+<script>
+    function integerReversal(str)
+{
+    let reverseinteger=str + '';
+    let rev='';
+    for(let i=reverseinteger.length-1;i>=0;i--){
+        rev+=reverseinteger[i];
+    }
+    console.log(rev);
+    if(str===parseInt(rev))
+    {
+        return true;
+    }
+    return false;
+}
+console.log(integerReversal(123));
+</script>

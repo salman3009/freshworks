@@ -1,0 +1,25 @@
+<script>
+    async function display(){
+        const urls = [
+        "https://jsonplaceholder.typicode.com/users/1",
+        "https://jsonplaceholder.typicode.com/users/2",
+    ];
+	
+     urls.map((url) =>
+        fetch(url).
+        then((response) => {
+            return response.json()}
+        ).
+            then((data)=>{
+            console.log(data);
+        })
+    );
+    // let promises = urls.map((url) =>
+    //     fetch(url).then((response) => response.json())
+    // );
+    // const data = await Promise.all(promises);
+    // console.log(data);
+
+    }
+    display();
+</script>
