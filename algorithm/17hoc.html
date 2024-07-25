@@ -1,4 +1,57 @@
 javascript:
 https://www.geeksforgeeks.org/javascript-higher-order-functions/
+
+a higher-order function is a function that can accept other functions as arguments, return functions, or both. They enable abstraction, composition, and the creation of more flexible and reusable code.
+example:
+function higherOrderFunction(callback) {
+    callback();
+}
+function callbackFunction() {
+    console.log("Callback function is executed.");
+}
+higherOrderFunction(callbackFunction);
+
 react
 https://www.freecodecamp.org/news/higher-order-components-in-react/#:~:text=Higher%2Dorder%20components%20(HOCs),that%20wraps%20the%20original%20component
+example:
+import React from 'react';
+import ReactDOM from 'react-dom';
+const withLoading = (WrappedComponent) => {
+  class WithLoading extends React.Component {
+    state = {
+      isLoading: true,
+    };
+
+    componentDidMount() {
+      setTimeout(() => {
+        this.setState({ isLoading: false });
+      }, 2000);
+    }
+
+    render() {
+      return (
+        <WrappedComponent
+          {...this.props}
+          loading={this.state.isLoading}
+        />
+      );
+    }
+  }
+
+  WithLoading.displayName = `withLoading(${WrappedComponent.displayName || WrappedComponent.name})`;
+
+  return WithLoading;
+};
+
+const MyComponent = ({ loading }) => (
+  <div>
+    {loading ? <p>Loading...</p> : <p>Hello, world!</p>}
+  </div>
+);
+
+const MyComponentWithLoading = withLoading(MyComponent);
+
+ReactDOM.render(
+  <MyComponentWithLoading />,
+  document.getElementById("root")
+);

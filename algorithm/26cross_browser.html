@@ -1,1 +1,51 @@
 https://www.freecodecamp.org/news/what-is-cross-browser-compatibility/
+
+1.Form Elements
+
+Use CSS to standardize the appearance of form elements as much as possible.
+For placeholders, ensure contrast and legibility across browsers:
+example:
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #909090;
+    opacity: 1; /* Firefox */
+  }
+
+2.Fonts
+Define a base font size in your CSS and use relative units (like em or rem) for text sizing as shown in the code below. This helps maintain scalability and consistency.
+example:
+html {
+    font-size: 16px; /* Define a base font size */
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  h1, h2, h3, p {
+    margin: 2rem;;
+    padding: 1.5rem;
+  }
+  When using web fonts, ensure they are loaded properly across all browsers by using services like Google Fonts
+
+3.Scrollbars 
+example:
+/* For Chrome, Firefox, and Edge */
+scrollbar-width: thin;
+scrollbar-color: #c0c0c0 #f0f0f0;
+For Safari, which uses the WebKit rendering engine, you'll need to use the ::-webkit-scrollbar pseudo-element to achieve similar styling.
+
+4.Define a Doctype
+<!DOCTYPE> declaration to ensure standards mode is activated
+
+5.Use a CSS Reset
+Normalize.css, which you can install using a package manager like npm 
+
+6.Review CSS Property Support
+
+7.Create Responsive Websites
+
+
+  
+

@@ -1,1 +1,29 @@
 https://www.freecodecamp.org/news/react-performance-optimization-techniques/
+
+Notes:
+1.List visualization
+windowing, involves rendering only the items currently visible on the screen.
+example:React Virtualized
+
+2.Lazy Loading Images
+The concept behind lazy loading is to initiate the load ow-resolution version of the image
+he user scrolls or interacts with the page actual image is loaded dynamically,
+example:react-lazyload
+
+3.Memoization
+caching the results of expensive computations
+example:
+React.memo(), useMemo(), and useCallback()
+
+4.Throttling and Deboucing Events
+
+Throttling allows you to control the rate at which the function is called by setting up a minimum time interval between each function invocation. 
+Debouncing allows you to postpone the function call until the user has finished typing or a specific time has elapsed since the last event.
+With debouncing, the search function will only be invoked after the user stops typing for 300ms.
+
+5.Code Splitting
+
+6.React Fragments
+
+7.web workers 
+Web Workers serve as a solution to alleviate the burden on the main thread. They allow the execution of scripts in the background on a separate thread, distinct from the main JavaScript thread.

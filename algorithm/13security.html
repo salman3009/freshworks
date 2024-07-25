@@ -1,1 +1,44 @@
 https://www.freecodecamp.org/news/best-practices-for-security-of-your-react-js-application/
+
+Notes:
+1. Cross-Site Scripting (XSS)
+//A perpetrator is able to add some malicious code to your program that is interpreted as valid and is executed as a part of the application. 
+2. Broken Authentication
+broken authorization, like session IDs being exposed in URLs,
+unencrypted transmission of credentials
+3. SQL Injection
+An attacker injects harmful SQL code that allows them to edit data without permission.
+4. XML External Entity Attack (XXE)
+An XXE attack is when the offender targets the XML parser which is required to transform XML into readable code.
+
+Best Practices:
+1.Secure basic authentication Cross-Site-(Broken Authentication)
+ensure that the domain header has a realm attribute. A realm contains the list of valid users and prompts for a username and password when accessing any restricted data.
+multi-factor authentication otp 
+every new login, you should always create a new session ID with a secure, server-side session manager
+
+2.Make sure that the HTML code is resilient - (XSS and arbitrary code execution)
+Disable HTML markups
+Use escape characters
+Utilize dangerouslySetInnerHTML and sanitize HTML 
+
+3.Use allowlist/blocklist and validation while URL parsing - (SQL injection).
+To avoid URL-based malicious script injection, always validate the URL using the HTTP or HTTPS protocols.
+
+4. Always use the principle of least privilege when allowing a connection to any database - ( SQL injection attacks.)
+
+5.Secure your React APIs - XSS and SQL injection
+A powerful mitigation technique against this vulnerability is validating all the API functions with respect to their API schemas. Also, schedule timely schema validations and use SSL/TLS encryption for all interactions.
+
+6.Implement a Web Application Firewall (WAF) -  SQL injection, XSS, arbitrary code execution and zip slip.
+A WAF is an application filter that detects and blocks malicious content by monitoring, analyzing and filtering bi-directional traffic
+
+7. Set up proper file management
+Confirm that the file names are standard and without any special characters.
+Whenever the files are uploaded as zip, always rename them before extracting and using the files.
+Store all files of a single component together in one folder so that any suspicious file can be quickly discovered.
+
+8. Never serialize sensitive data
+
+This can be potentially dangerous because JSON.stringify() is a function that converts any data into a string without detecting malicious values. An attacker can manipulate data like username and password by injecting a JS object that can modify valid data.
+You can either use the serialize-javascript NPM module that will escape the rendered JSON or use complex JSON formats that will avoid serialization. But the best way to prevent any mishap is to omit confidential data from the serialized form

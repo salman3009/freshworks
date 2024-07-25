@@ -1,1 +1,10 @@
 https://www.geeksforgeeks.org/reactjs-virtual-dom/
+
+React JS Virtual DOM is an in-memory representation of the DOM
+
+When anything new is added to the application, a virtual DOM is created and it is represented as a tree. 
+Each element in the application is a node in this tree. So, whenever there is a change in the state of any element,
+a new Virtual DOM tree is created. This new Virtual DOM tree is then compared with the previous Virtual DOM tree and make a note of the changes. 
+After this, it finds the best possible ways to make these changes to the real DOM. Now only the updated elements will get rendered on the page again.
+
+React uses something called batch updates to update the real DOM. It just means that the changes to the real DOM are sent in batches instead of sending any update for a single change in the state of a component. 

@@ -1,1 +1,12 @@
 https://www.geeksforgeeks.org/explain-asynchronous-vs-deferred-javascript/
+
+Asynchronouse:
+Asynchronous: When we use the async attribute the script is downloaded asynchronously with the rest of the page without pausing the HTML parsing and the contents of the page are processed and displayed. Once the script is downloaded, the HTML parsing will be paused and the script’s execution will happen.
+<script async src = "script.js"></script>
+
+Deferred: 
+The defer attribute tells the browser not to interfere with the HTML parsing and only to execute the script file once the HTML document has been fully parsed. 
+he downloading of the script starts asynchronously in the background and when the scripts get downloaded, it is executed only after the HTML parsing is finished.
+
+example:
+<script defer src = "script.js"></script>

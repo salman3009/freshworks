@@ -1,1 +1,25 @@
 https://www.geeksforgeeks.org/how-to-reduce-risk-of-exposure-to-csrf-xsrf-or-xss-attacks/
+
+Cross-Site Request Forgery (CSRF) is a Web application security vulnerability where an attacker tricks end-users into performing unwanted actions in which the user is logged in
+
+The main purpose of XSS vulnerabilities is to steal the credentials of the victim. An XSS vulnerability is mainly a javascript technique. This vulnerability happens because of Developer didn’t pay attention to the user input filter.
+
+Prevents:
+1.Anti-CSRF Tokens: 
+CSRF token should be:
+Unpredictable with high entropy.
+Tied to the user’s session.
+Strictly validated in every case before the relevant action is executed.
+
+2.Same Site cookies:
+
+CSRF occurs when the victim clicks on attacker.com and the request goes to bank.com including victim session_id. That is cross-site communication when the request comes from a third-party site such as xyz.com and the request goes to abc.com.
+
+so, what happens if we are not providing the session_id then they don’t have any chance to authorize and csrf prevents. That thing provides do same site cookie features.
+
+example:
+Set-Cookie: SessionId=NJCVnjnfCUrAfjoKkojDOOknKOkncKfmKDm; 
+SameSite=Strict; 
+Set-Cookie: SessionId=NJCVnjnfCUrAfjoKkojDOOknKOkncKfmKDm; 
+SameSite=Lax;
+
