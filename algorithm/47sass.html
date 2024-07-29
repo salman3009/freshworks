@@ -1,0 +1,56 @@
+https://medium.com/swlh/learn-the-scss-sass-basics-in-5-minutes-73002653b443
+
+Sass adds Variables, Nesting, Partials, Mixins, Extend/Inheritance, and Operators.
+
+SCSS uses mostly the same syntax of CSS while Sass takes away curly braces and semi-colons
+
+example:
+SCSS SYNTAX
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+SASS SYNTAX
+$font-stack:    Helvetica, sans-serif
+$primary-color: #333
+
+body
+  font: 100% $font-stack
+  color: $primary-color
+
+
+1.variables:
+$primary-color: #333; 
+body {
+  background-color: $primary-color;
+}
+.text {
+  color: $primary-color;
+}
+
+Nesting 
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    li { display: inline-block; }
+  }
+
+3.
+Partials
+Partials are Sass or Scss files that have an underscore in the front of the filename. For example. “_test.scss”. What does this do? 
+It denote’s that this particular file should not be turned into CSS when the time comes. These files will contain snippets of CSS that can then be imported by other SCSS files.
+
+4.Mixins
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+  .box { @include transform(rotate(30deg)); }

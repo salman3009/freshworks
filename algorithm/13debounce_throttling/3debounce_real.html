@@ -13,12 +13,14 @@
     function debounce(func,delay = 300){
         let debounceTimer 
         return function(){
-            console.log(this);
+           // console.log(this);
             const args = arguments;
-            console.log(args);
+           // console.log(args);
                 clearTimeout(debounceTimer) 
                     debounceTimer 
-                = setTimeout(() => func.apply(this, args), delay) 
+                = setTimeout(() => { 
+                    return func.apply(this, args)
+                }, delay) 
         }
     }
 
@@ -27,4 +29,3 @@
     }
     const processChange = debounce((event)=>saveInput(event));
 </script>
-
