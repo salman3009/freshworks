@@ -1,0 +1,19 @@
+https://fadamakis.com/polling-with-setinterval-vs-settimeout-in-javascript-c20caadee1cb
+
+
+async function longPolling() {
+    try {
+        // Wait for the fetch to resolve
+        const response = await fetch('/updates');
+        console.log('Data received:', response);
+    } catch (error) {
+        console.error('Error during long polling:', error);
+        // Optionally implement a backoff strategy before retrying
+    } finally {
+        // Schedule the next poll
+        setTimeout(longPolling, 2000);
+    }
+}
+
+// Initiate the long polling
+longPolling();

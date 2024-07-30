@@ -1,0 +1,59 @@
+https://www.freecodecamp.org/news/how-to-write-unit-tests-in-react/
+
+
+package name:
+jest 
+react/testing-library
+Example:1
+
+import { render, screen } from '@testing-library/react'
+import FirstTest from '../components/FirstTest';
+
+test("Example 1 renders successfully", () => {
+    render(<FirstTest/>);
+
+    const element = screen.getByText(/first test/i);
+
+    expect(element).toBeInTheDocument();
+})
+
+2.Test with props 
+
+test("List renders successfully", () => {
+    render(<TestWithMockData data={mockData} />)
+    expect(screen.getByText(/fletcher/i)).toBeInTheDocument();
+})
+
+3.Test Events 
+
+test("Email link click handler called", async () => {
+    const mockHandleClick = jest.fn();
+    render(<TestWithMockData 
+                data={mockData} 
+                displayUnorderedList={true}
+                handleClick = {mockHandleClick}
+          />)
+    await userEvent.click(screen.getByText(/mmcvanamy0@e-recht24.de/i));
+    expect(mockHandleClick).toHaveBeenCalled();
+})
+
+4.button test 
+const button = screen.getByRole('button')
+
+5.state updates 
+test("Element added to the list", async () => {
+    render(<TestingStateChange/>)
+    expect(screen.getAllByTestId('record').length).toBe(3);
+
+    await userEvent.click(screen.getByText(/add to list/i));
+    expect(screen.getAllByTestId('record').length).toBe(4);
+})
+
+6.Mock Data 
+const mockFetchData = jest.spyOn(services, 'FetchData')
+        .mockImplementation(async () => {
+            return [{
+                name: 'kunal'
+            }];
+        })
+

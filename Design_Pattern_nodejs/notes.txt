@@ -94,3 +94,6 @@ const service = new Service(db, logger);
 8.Promise Pattern 
 Promises are a pattern for asynchronous programming in Node.js. 
 They represent the eventual result of an async operation
+
+9.facade pattern 
+

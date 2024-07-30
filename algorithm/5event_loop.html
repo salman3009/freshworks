@@ -10,3 +10,27 @@ This allows JavaScript to handle non-blocking tasks without freezing, keeping th
 3.Event Loop
 4.Execution
 5.Callback Execution
+
+callback queue and job queue 
+
+job queue are executed before the next rendering, I/O operation, or timer event
+
+
+
+console.log('Start');
+
+setTimeout(function() {
+  console.log('Timeout');
+}, 0);
+
+Promise.resolve().then(function() {
+  console.log('Promise');
+});
+
+console.log('End');
+The output of the above code is as following
+
+Start
+End
+Promise
+Timeout
