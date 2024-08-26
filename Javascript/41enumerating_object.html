@@ -1,1 +1,12 @@
 https://www.geeksforgeeks.org/what-does-enumerable-property-mean-in-javascript/
+
+
+const employee={
+    marks:44
+}
+Object.defineProperty(employee,"marks",{
+     value:33,
+     writable:false,
+     configurable:false 
+     enumerable:false
+})

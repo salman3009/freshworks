@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.vertical-line-blue {
+  width: 5px;
+  background-color: blue;
+  height: 124px;
+  margin-left: 8px;
+  position: relative;
+}
+
+.vertical-line-grey{
+  width: 5px;
+  background-color: grey;
+  height: 124px;
+  margin-left: 8px;
+  position: relative;
+}
+
+
+.full-circle{
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: blue;
+  border: 2px solid blue;
+}
+
+.outer-circle-blue{
+  border: 2px solid blue;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+
+.outer-circle-grey{
+  border: 2px solid grey;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+.box{
+  width: 50%;
+  margin: auto;
+}
+
+.wrapper{
+  display: flex;
+  gap:20px;
+}

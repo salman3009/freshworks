@@ -1,0 +1,12 @@
+<script>
+    function A () {}
+function B () {}
+
+A.prototype.x = function () { console.log('hello') 
+}
+
+let b = new B();
+Object.setPrototypeOf(b,new A());
+b.x();
+console.log(b);
+</script>

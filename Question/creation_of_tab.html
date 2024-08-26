@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <style>
+        .global {
+            width: 80%;
+            margin: 100px auto;
+            height: 300px;
+            border: 1px solid #8080807d;
+            border-radius: 5px;
+        }
+
+        #container {
+            width: 100%;
+            height: auto;
+            margin: 42px 0px 10px 29px;
+            display: flex;
+            font-size: 20px;
+            flex-wrap: wrap;
+            justify-content: left;
+            gap: 60px;
+        }
+
+        .tab {
+            width: 37px;
+            cursor: pointer;
+        }
+
+        .box {
+            width: 100%;
+            height: 200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .horizontal {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background-color: #8080807d;
+        }
+
+        .slider {
+            position: absolute;
+            width: 45px;
+            height: 3px;
+            background-color: #1717b3b5;
+            top: -2px;
+            display:none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="global">
+        <div id="container">
+
+        </div>
+        <div class="horizontal">
+            <div class="slider" id="adjust"></div>
+        </div>
+
+        <div class="box" id="box">
+
+        </div>
+    </div>
+
+    <script>
+        let previousId = -1;
+        function tabCreation(arr) {
+            const global = document.getElementById("container");
+            for (let i = 0; i < arr.length; i++) {
+                const parent = document.createElement('div');
+                const child = document.createTextNode(arr[i].name);
+                parent.classList.add("tab");
+                parent.setAttribute("id", i);
+                parent.addEventListener('click', display);
+                parent.appendChild(child);
+                global.appendChild(parent);
+            }
+        }
+
+        function display(event) {
+            if(previousId!=-1){
+                document.getElementById(previousId).style.color = "black";   
+            }
+            previousId = event.target.id;
+            document.getElementById("box").style.display = "block";
+            document.getElementById(event.target.id).style.color = "blue";
+            document.getElementById("box").innerHTML = arrDetails[event.target.id].content;
+            document.getElementById("adjust").style.display = "block";
+            let result = 125;
+            if(event.target.id == 0){
+                result = 30;
+            }
+            else if(event.target.id = 1){
+                result = 125;
+            }
+            else {
+                result+=95;
+            }
+            document.getElementById("adjust").style.left = `${result}px`;
+
+        }
+
+        const arrDetails = [{ name: "TAB1", content: "details1" }, { name: "TAB2", content: "details2" }];
+        tabCreation(arrDetails);
+    </script>
+</body>
+
+</html>
