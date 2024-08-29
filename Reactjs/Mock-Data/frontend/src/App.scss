@@ -1,0 +1,28 @@
+/* Define a variable */
+$primary-color: #4286f4;
+
+/* Use the variable in a class definition */
+.header {
+  color: $primary-color;
+}
+
+/* Nest classes */
+.container {
+  .header {
+    font-size: 24px;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+}
+
+/* Define a mixin */
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+/* Use the mixin in a class definition */
+.button {
+  @include border-radius(4px);
+}
