@@ -1,0 +1,13 @@
+Javascript is superset of Typescript
+installing typescript: npm i -g typescript 
+compiling: tsc index.ts 
+
+Features of Typescript 
+1.Interfaces
+2.Generics
+3.Decorators
+4.Rich configuration options 
+
+Extension:
+ESLint
+Prettier

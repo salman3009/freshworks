@@ -1,0 +1,8 @@
+https://www.geeksforgeeks.org/how-to-create-an-npm-library-from-react-components/
+
+create the project:
+1.npm init 
+package-name:greenprint-component@1.0.0
+
+
+

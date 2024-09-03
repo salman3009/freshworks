@@ -1,0 +1,31 @@
+Datatypes:
+1.number
+2.string 
+3.boolean 
+
+Object Types:
+example:
+const person:{name:string,age:number,tags:string[]}={
+    name:"salman",
+    age:33,
+    tags: ['great-offer', 'hot-and-new'],
+}
+
+Array Types:
+const tags:string[] = ['great-offer', 'hot-and-new'];
+
+Tuple
+Added by typescript fixed length 
+example:
+const role:[number,string] =[33,"salman"]
+
+Enum 
+global constant identifiers 
+example:
+enum Role{ADMIN=5,AUTHOR}
+const role = Role.ADMIN;
+=============================================
+Javascript has dynamic types 
+Typescript has static types 
+=============================================
+
