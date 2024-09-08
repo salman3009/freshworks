@@ -1,0 +1,21 @@
+How to run autmatically Typescript:
+tsc app.ts -w 
+
+How to create tsconfig.json
+tsc --init 
+
+Running all files together 
+tsc 
+
+How to exclude files 
+{
+  "compilerOptions": {
+  },
+  "exclude": [
+    "analytics.ts"
+    "*.div.ts",
+    "**/*.div.ts",
+    "node_modules"
+  ]
+}
+

@@ -1,58 +1,78 @@
 .container {
-  width: 100%;
-  margin: 50px auto;
+  width: 75%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  height: auto;
+  margin: 100px auto;
+  gap: 50px;
 }
 
-.vertical-line-blue {
-  width: 5px;
+.header {
+  text-align: center;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
   background-color: blue;
-  height: 124px;
-  margin-left: 8px;
-  position: relative;
 }
 
-.vertical-line-grey{
-  width: 5px;
-  background-color: grey;
-  height: 124px;
-  margin-left: 8px;
-  position: relative;
+.rectangle {
+  width: 200px;
+  height: 100px;
+  background-color: red;
 }
 
+.oval {
+  width: 200px;
+  border-radius: 75%;
+  height: 100px;
+  background-color: green;
+}
 
-.full-circle{
-  width: 20px;
-  height: 20px;
+.circle {
+  width: 100px;
   border-radius: 100%;
-  background-color: blue;
-  border: 2px solid blue;
+  height: 100px;
+  background-color: yellow;
 }
 
-.outer-circle-blue{
-  border: 2px solid blue;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
+.trapezoid {
+  border-bottom: 50px solid #555;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 125px;
 }
 
-
-.outer-circle-grey{
-  border: 2px solid grey;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #555;
 }
 
-.box{
-  width: 50%;
-  margin: auto;
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 50px solid #555;
 }
 
-.wrapper{
-  display: flex;
-  gap:20px;
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid #555;
+  border-bottom: 25px solid transparent;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid #555;
+  border-bottom: 25px solid transparent;
 }

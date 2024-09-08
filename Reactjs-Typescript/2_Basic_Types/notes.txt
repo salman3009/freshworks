@@ -24,6 +24,72 @@ global constant identifiers
 example:
 enum Role{ADMIN=5,AUTHOR}
 const role = Role.ADMIN;
+
+Any 
+any types
+Try to avoid 
+example
+let details:any;
+details=[1,2,3]
+
+union types 
+more than one type
+example:
+function add(n1:number|string,n2:number|string){
+
+}
+
+Literal types 
+function combine(input1:number|string,resultConversion:'as-number':'as-text'){
+   if(resultConversion === "as-number"){
+        return +result;
+   }
+   else{
+       return result.toString();
+   }
+}
+combine(30,26,'as-number');
+
+Types Aliases/Custom Types 
+type Combinable = number | string;
+function add(n1:Combinable){
+
+}
+
+Never Types
+//It will never return anything
+function generateError(message:string):never{
+    throw ({message:message});
+}
+==============================================
+function Return Types
+example:
+function add():number{
+    return 1;
+}
+function add():void{
+}
+
+Functions as Types 
+example:
+function add(n1:number,n2:number){
+    return n1+n2;
+}
+let combineValues = (n1:number,n2:number)=>number
+combineValues(1,2);
+
+
+Functions Types as callbacks
+
+function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
+  const result = n1 + n2;
+  cb(result);
+}
+addAndHandle(10, 20, (result) => {
+  console.log(result);
+});
+
+
 =============================================
 Javascript has dynamic types 
 Typescript has static types 
