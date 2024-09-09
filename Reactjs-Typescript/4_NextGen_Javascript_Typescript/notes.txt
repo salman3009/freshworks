@@ -1,0 +1,46 @@
+ES6:
+
+let & const 
+example:
+let age = 33;
+const PI = 3.14;
+
+arrow functions 
+example:
+const test = (param1: number, param2: number): number => {
+   return param1 * param2;
+};
+
+Default functions arguments
+example:
+const test = (param1:number=1, param2: number): number => {
+   return param1 * param2;
+};
+
+spread operator:
+example:
+const hobbies=['cycling','cricket'];
+const liking=[...hobbies,'racer'];
+example:
+const person={
+    fullName:"salman"
+}
+const employee={...person,age:33};
+
+
+rest operator:
+example:
+const add =(...numbers:number[])=>{
+     console.log(numbers);
+}
+add(1,2,2,3);
+
+Array & object Destructing 
+example:
+const hobbies=['cycling','cricket'];
+const [hobby1,hobby2,...others]=hobbies;
+const person={
+    fullName:"salman"
+}
+const {fullName} = person;
+

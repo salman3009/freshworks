@@ -19,3 +19,39 @@ How to exclude files
   ]
 }
 
+How to include some default library
+ 
+{
+  "compilerOptions": {
+    "lib":[
+        "dom",
+        "es6"
+    ]
+  }
+}
+
+How to debug in browser with ts file
+
+{
+  "compilerOptions": {
+     "sourceMap":true
+  }
+}
+
+How to configure output and input files 
+dist --> output 
+src -->input 
+{
+  "compilerOptions": {
+     "outDir":"./dist",
+     "rootDir":"./src"
+  }
+}
+
+If we have error don't generate js files
+{
+  "compilerOptions": {
+     "noEmitOnError":true
+  }
+}
+
