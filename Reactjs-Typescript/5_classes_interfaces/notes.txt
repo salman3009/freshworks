@@ -1,1 +1,3 @@
 OOPS:
+class you can extends one class 
+interface you can implements multiple interface 
