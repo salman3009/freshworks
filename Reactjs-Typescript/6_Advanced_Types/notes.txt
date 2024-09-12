@@ -1,0 +1,5 @@
+1.Intersection Types 
+2.Type Guards 
+3.Union Types
+4.Type Casting
+5.Index Properties 
