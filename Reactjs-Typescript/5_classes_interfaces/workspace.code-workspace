@@ -1,10 +1,7 @@
 {
     "folders": [
         {
-            "path": "../10_Reactjs_Setup/react-05-finished"
-        },
-        {
-            "path": "../../Question/home_assignment"
+            "path": "../../Question"
         }
     ]
 }

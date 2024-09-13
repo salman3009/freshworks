@@ -1,6 +1,4 @@
-
-
-export const chartOptions=(displayList)=>{
+export const chartOptions=(displayList:any)=>{
     return{
         chart: {
           type: "column",
