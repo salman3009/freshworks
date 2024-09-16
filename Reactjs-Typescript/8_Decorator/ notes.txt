@@ -1,0 +1,9 @@
+To make on the Decorators:
+{
+  "compilerOptions": {
+    "target": "es6",
+    "experimentalDecorators": true 
+  }
+}
+Decorator is a function apply to class in certain way.
+Decorator while execute first before instance.

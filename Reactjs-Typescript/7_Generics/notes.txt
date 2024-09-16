@@ -1,0 +1,2 @@
+Generics:
+It is connected to another type.
