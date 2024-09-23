@@ -1,0 +1,6 @@
+Splitting files:
+1.namespace features
+2.import/export 
+
+Four different types of import/export
+https://medium.com/computed-comparisons/commonjs-vs-amd-vs-requirejs-vs-es6-modules-2e814b114a0b
