@@ -1,0 +1,22 @@
+<script>
+    const arr1=[1,3,4,88,99,12,4];
+    const arr2=[1,77,23,34];
+    const objOne={};
+    const objTwo={};
+    let unqiueArray=[];
+  
+    arr1.forEach((element)=>{
+        objOne[element]?objOne[element]++:objOne[element]=1;
+    });
+    arr2.forEach((element)=>{
+      objTwo[element]?obj[element]++:objTwo[element]=1;
+    });
+  
+    for(let obj in objOne){
+       if(!objTwo[obj]){
+        unqiueArray.push(obj);
+       }
+    }
+    unqiueArray=[...unqiueArray,...Object.keys(objTwo)]
+    console.log(unqiueArray);
+  </script>
