@@ -1,0 +1,111 @@
+webpack:
+It is tool to bundle files together.
+minified code.
+autmotic recompile.
+
+npm install --save-dev webpack webpack-cli webpack-dev-server typscript ts-loader
+
+tsconfig.json
+{
+  "compilerOptions": {
+     "outDir":"./dist",
+     "sourceMap":true
+  }
+}
+
+create file named webpack.config.js 
+//if you have webpack no need to give extenion.js while import
+
+webpack.config.js
+const path = require('path');
+ 
+module.exports = {
+  mode: 'development',
+  entry: './src/app.ts',
+  devServer: {
+    static: [
+      {
+        directory: path.join(__dirname),
+      },
+    ],
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/dist/',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
+  },
+};
+
+package.json 
+{
+    "scripts":{
+        "start":"webpack-dev-server",
+        "build":"webpack"
+    }
+}
+
+index.html
+<script type="module" src="dist/bundle.js"></script>
+
+========================================
+Production webpack config file:
+
+package.json 
+{
+    "scripts":{
+        "start":"webpack-dev-server",
+            "build": "webpack --config webpack.config.prod.js"
+    }
+}
+
+
+
+//to clear dist folder
+npm install --save-dev clean-webpack-plugin
+
+const path = require('path');
+const CleanPlugin = require('clean-webpack-plugin');
+
+module.exports = {
+  mode: 'production',
+  entry: './src/app.ts',
+  devServer: {
+    static: [
+      {
+        directory: path.join(__dirname),
+      },
+    ],
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.ts', '.js']
+  },
+  plugins: [
+    new CleanPlugin.CleanWebpackPlugin()
+  ]
+};
+============================================
