@@ -1,13 +1,19 @@
 <script>
-let total = 0;
-function add(...args){
-    //Add up every argument received
-   
+function add (num) {
+    function adder (n) {
+        if (n !== undefined) {
+            num *= n;
+            return adder;
+        }
+        else { // terminate
+            return num;
+        }
+    }
+    return adder;
 }
 
-add(1)(2)(3);
 
-console.log(total);
+var sum = add(1)(2)(3)(4)();
 
- 
+ console.log(sum);
 </script>
