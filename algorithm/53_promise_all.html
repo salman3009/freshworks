@@ -1,0 +1,25 @@
+<script>
+
+    const prom3 = 50;
+    
+    const prom1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Resolved First after 2 second");
+        }, 1000);
+    });
+      
+    const prom2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Resolved First after 1 seconds");
+        }, 2000);
+    });
+      
+    
+     
+    Promise.all([prom1,prom2,prom3]).then((obj)=>{
+        console.log(obj);
+    }).catch(()=>{
+    
+    })
+    
+    </script>
