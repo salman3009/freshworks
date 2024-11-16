@@ -18,10 +18,10 @@ class App extends Component {
          axios.get('http://localhost:3000/expense').then((response)=>{
                  let balance =0;
              for(let obj of response.data){
-                if(obj.type="ADD"){
+                if(obj.type=="ADD"){
                   balance+=Number(obj.expense)
                 }
-                else if(obj.type="REMOVE"){
+                else if(obj.type=="REMOVE"){
                   balance-=Number(obj.expense)
                 }
              }

@@ -1,0 +1,17 @@
+To create typescript template in react:
+npx create-react-app my-app --template typescript
+
+React hook form:
+https://react-hook-form.com/get-started
+
+if you want to use FunctionComponent with class Component, Then use React.ComponentType
+
+forwardRef:
+https://dev.to/hossain45/implementing-react-forwardref-with-typescript-5ka#:~:text=forwardRef%20to%20forward%20the%20ref,node%20or%20React%20component%20instance.
+
+Typescript with React
+https://www.youtube.com/watch?v=j898RGRw0b4
+https://www.youtube.com/watch?v=TPACABQTHvM
+
+useMemo with Typescript:
+https://dev.to/kirubelkinfe/mastering-usememo-in-react-with-typescript-4-different-use-cases-for-usememo-5gal
