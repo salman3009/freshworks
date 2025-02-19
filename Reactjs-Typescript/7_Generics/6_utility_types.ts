@@ -11,7 +11,7 @@ function createSeconds(title:string,description:string,date:Date):CourseGoal{
        courseGoal.title = title;
        courseGoal.description = description;
        courseGoal.date = date;
-       return courseGoal as CourseGoal ;
+       return courseGoal as CourseGoal;
 }
 
 const names:Readonly<string[]>=["manu","anna"];
